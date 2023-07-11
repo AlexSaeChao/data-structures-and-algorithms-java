@@ -3,3 +3,5 @@
 ## Table Of Contents
 
 [Reverse Array](./arrayReverse/README.md)
+
+[Insert Shift Array](./insertShiftArray/README.md)
