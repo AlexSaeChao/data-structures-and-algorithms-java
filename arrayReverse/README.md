@@ -4,7 +4,7 @@ Write a function which takes an array as an argument, return an array with eleme
 
 ## Whiteboard Process
 
-![Whiteboard process](.\challenge_01_whiteboard.png)
+![Whiteboard process](./challenge_01_whiteboard.png)
 
 ## Approach & Efficiency
 
