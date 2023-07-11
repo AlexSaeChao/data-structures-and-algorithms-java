@@ -2,4 +2,4 @@
 
 ## Table Of Contents
 
-[Reverse Array](arrayReverse\README.md)
+[Reverse Array](./arrayReverse/README.md)
