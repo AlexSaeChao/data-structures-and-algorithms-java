@@ -14,6 +14,39 @@ public class LinkedList
             tail = newNode;
         }
     }
+
+    public void append(int value)
+    {
+        Node newNode = new Node(value);
+        if(tail == null) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+    }
+
+    public void insertBefore(int value, int newValue)
+    {
+        Node newNode = new Node(newValue);
+        if (head != null && head.value == value) {
+            newNode.next = head;
+            head = newNode;
+            return;
+        }
+
+        Node current = head;
+        while (current != null && current.next != null) {
+            if (current.next.value == value) {
+                newNode.next = current.next;
+                current.next = newNode;
+                return;
+            }
+            current = current.next;
+        }
+    }
+
     public boolean includes(int value)
     {
         Node current = head;
