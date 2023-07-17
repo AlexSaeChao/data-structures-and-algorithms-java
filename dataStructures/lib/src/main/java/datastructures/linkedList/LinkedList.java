@@ -36,6 +36,13 @@ public class LinkedList
             return;
         }
 
+        if(head == null) {
+            newNode.next = null;
+            this.head = newNode;
+            this.tail = newNode;
+            return;
+        }
+
         Node current = head;
         while (current != null && current.next != null) {
             if (current.next.value == value) {
