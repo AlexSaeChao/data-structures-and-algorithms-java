@@ -54,6 +54,34 @@ public class LinkedList
         }
     }
 
+    public void insertAfter(int value, int newValue)
+    {
+        Node newNode = new Node(newValue);
+        if (head != null && head.value == value) {
+            newNode.next = head;
+            head = newNode;
+            return;
+        }
+
+        if(head == null) {
+            newNode.next = null;
+            this.head = newNode;
+            this.tail = newNode;
+            return;
+        }
+
+        Node current = head;
+        while (current != null) {
+            if (current.value == value) {
+                newNode.next = current.next;
+                current.next = newNode;
+                return;
+            }
+            current = current.next;
+        }
+    }
+
+
     public boolean includes(int value)
     {
         Node current = head;

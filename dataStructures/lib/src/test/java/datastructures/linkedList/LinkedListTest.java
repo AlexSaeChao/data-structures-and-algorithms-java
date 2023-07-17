@@ -7,13 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 public class LinkedListTest {
     private LinkedList list;
 
-    @BeforeEach
-    public void setUp() {
+    @BeforeEach public void setUp() {
         list = new LinkedList();
     }
 
-    @Test
-    public void testEmptyLinkedList() {
+    @Test public void testEmptyLinkedList() {
         // Arrange
 
         // Act
@@ -23,8 +21,7 @@ public class LinkedListTest {
         assertNull(list.tail);
     }
 
-    @Test
-    public void testInsertIntoLinkedList() {
+    @Test public void testInsertIntoLinkedList() {
         // Arrange
 
         // Act
@@ -36,8 +33,7 @@ public class LinkedListTest {
         assertNotNull(list.tail);
     }
 
-    @Test
-    public void testMultipleInsertions() {
+    @Test public void testMultipleInsertions() {
         // Arrange
 
         // Act
@@ -52,8 +48,7 @@ public class LinkedListTest {
         assertEquals(10, list.tail.value);
     }
 
-    @Test
-    public void testIncludes() {
+    @Test public void testIncludes() {
         // Arrange
         list.insert(10);
         list.insert(20);
@@ -69,8 +64,7 @@ public class LinkedListTest {
         assertFalse(list.includes(50));
     }
 
-    @Test
-    public void testToString() {
+    @Test public void testToString() {
         // Arrange
         list.insert(10);
         list.insert(20);
@@ -82,8 +76,7 @@ public class LinkedListTest {
         assertEquals("30 -> 20 -> 10 -> null", list.toString());
     }
 
-    @Test
-    public void testAppend() {
+    @Test public void testAppend() {
         // Arrange
         list.append(10);
         // Act
@@ -92,8 +85,7 @@ public class LinkedListTest {
         assertEquals("10 -> null", list.toString());
     }
 
-    @Test
-    public void testInsertBefore() {
+    @Test public void testInsertBefore() {
         // Arrange
         list.insert(20);
         list.insert(15);
@@ -105,10 +97,30 @@ public class LinkedListTest {
         assertEquals("5 -> 10 -> 15 -> 20 -> null", list.toString());
     }
 
-    @Test
-    public void testInsertBeforeEmptyList() {
+    @Test public void testInsertBeforeEmptyList() {
         // Arrange
         list.insertBefore(15, 10);
+        // Act
+
+        // Assert
+        assertEquals("10 -> null", list.toString());
+    }
+
+    @Test public void testInsertAfter() {
+        // Arrange
+        list.insert(20);
+        list.insert(10);
+        list.insert(5);
+        list.insertAfter(10, 15);
+        // Act
+
+        // Assert
+        assertEquals("5 -> 10 -> 15 -> 20 -> null", list.toString());
+    }
+
+    @Test public void testInsertAfterEmptyList() {
+        // Arrange
+        list.insertAfter(15, 10);
         // Act
 
         // Assert
