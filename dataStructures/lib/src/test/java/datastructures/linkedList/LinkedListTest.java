@@ -90,5 +90,18 @@ public class LinkedListTest {
 
         // Assert
         assertEquals("10 -> null", list.toString());
-}
+    }
+
+    @Test
+    public void testInsertBefore() {
+        // Arrange
+        list.insert(20);
+        list.insert(15);
+        list.insert(5);
+        list.insertBefore(15, 10);
+        // Act
+
+        // Assert
+        assertEquals("5 -> 10 -> 15 -> 20 -> null", list.toString());
+    }
 }
