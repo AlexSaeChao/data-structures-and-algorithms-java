@@ -81,4 +81,14 @@ public class LinkedListTest {
         // Assert
         assertEquals("30 -> 20 -> 10 -> null", list.toString());
     }
+
+    @Test
+    public void testAppend() {
+        // Arrange
+        list.append(10);
+        // Act
+
+        // Assert
+        assertEquals("10 -> null", list.toString());
+}
 }
