@@ -126,4 +126,85 @@ public class LinkedListTest {
         // Assert
         assertEquals("10 -> null", list.toString());
     }
+
+    @Test public void testKthFromEnd() {
+        // Arrange
+        list.insert(2);
+        list.insert(8);
+        list.insert(3);
+        list.insert(1);
+
+        int k = 3;
+        int expectedValue = 1;
+        // Act
+        int actualValue = list.kthFromEnd(k);
+        // Assert
+        assertEquals(expectedValue, actualValue);
+    }
+
+    @Test public void testKthGreaterThanLength() {
+        // Arrange
+        // Arrange
+        list.insert(2);
+        list.insert(8);
+        list.insert(3);
+        list.insert(1);
+
+        int k = 5; // k is greater than the length of the linked list
+        // Act and Assert
+        assertThrows(IllegalArgumentException.class, () -> list.kthFromEnd(k));
+    }
+
+    @Test public void testKthSameAsLength() {
+        // Arrange
+        list.insert(2);
+        list.insert(8);
+        list.insert(3);
+        list.insert(1);
+
+        int k = 4; // k is the same than the length of the linked list
+
+        // Act and Assert
+        assertThrows(IllegalArgumentException.class, () -> list.kthFromEnd(k));
+    }
+
+    @Test public void testKthIsNegativeInt() {
+        // Arrange
+        list.insert(2);
+        list.insert(8);
+        list.insert(3);
+        list.insert(1);
+
+        int k = -3; // k is a negative number
+        // Act and Assert
+        assertThrows(IllegalArgumentException.class, () -> list.kthFromEnd(k));
+    }
+
+    @Test public void testLinkedListSizeOfOne() {
+        // Arrange
+        list.insert(2);
+
+        int k = 0; // k is a negative number
+        int expectedValue = 2;
+        // Act and Assert
+        int actualValue = list.kthFromEnd(k);
+        // Assert
+
+        assertEquals(expectedValue, actualValue);
+    }
+
+    @ Test public void testKthFromTheMiddle() {
+        // Arrange
+        list.insert(2);
+        list.insert(8);
+        list.insert(3);
+        list.insert(1);
+
+        int k = 2;
+        int expectedValue = 3;
+        // Act
+        int actualValue = list.kthFromEnd(k);
+        //Assert
+        assertEquals(expectedValue, actualValue);
+    }
 }

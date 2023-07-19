@@ -81,6 +81,30 @@ public class LinkedList
         }
     }
 
+    public int kthFromEnd(int k) {
+        if (head == null || k < 0) {
+            throw new IllegalArgumentException("Invalid value of k or empty list");
+        }
+
+        Node placeHolderNode = head;
+        Node targetNode = head;
+
+        // Move the placeHolderNode pointer k places ahead first
+        for (int i = 0; i < k; i++) {
+            placeHolderNode = placeHolderNode.next;
+            if (placeHolderNode == null) {
+                throw new IllegalArgumentException("k exceeds the list length!");
+            }
+        }
+
+        // Move both pointers until the placeHolderNode pointer reaches the end
+        while (placeHolderNode.next != null) {
+            placeHolderNode = placeHolderNode.next;
+            targetNode = targetNode.next;
+        }
+
+        return targetNode.value;
+    }
 
     public boolean includes(int value)
     {
