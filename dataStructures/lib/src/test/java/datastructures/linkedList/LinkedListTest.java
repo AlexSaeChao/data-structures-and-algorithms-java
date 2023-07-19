@@ -207,4 +207,65 @@ public class LinkedListTest {
         //Assert
         assertEquals(expectedValue, actualValue);
     }
+
+    @Test
+    public void testZipLists() {
+        // Arrange
+        LinkedList list1 = new LinkedList();
+        list1.append(1);
+        list1.append(3);
+        list1.append(2);
+
+        LinkedList list2 = new LinkedList();
+        list2.append(5);
+        list2.append(9);
+        list2.append(4);
+
+        LinkedList mergedList = new LinkedList();
+
+        // Act
+        LinkedList.Node mergedHead = mergedList.zipLists(list1, list2);
+
+        // Assert
+        assertNotNull(mergedHead);
+
+        int[] expectedValues = {1, 5, 3, 9, 2, 4};
+        LinkedList.Node current = mergedHead;
+        for (int expectedValue : expectedValues) {
+            assertEquals(expectedValue, current.value);
+            current = current.next;
+        }
+
+        assertNull(current); // Make sure all nodes have been traversed
+    }
+
+    @Test
+    public void testZipListsWithDifferentLength() {
+        // Arrange
+        LinkedList list1 = new LinkedList();
+        list1.append(1);
+        list1.append(3);
+
+        LinkedList list2 = new LinkedList();
+        list2.append(5);
+        list2.append(9);
+        list2.append(4);
+
+        LinkedList mergedList = new LinkedList();
+
+        // Act
+        LinkedList.Node mergedHead = mergedList.zipLists(list1, list2);
+
+        // Assert
+        assertNotNull(mergedHead);
+
+        int[] expectedValues = {1, 5, 3, 9, 4};
+        LinkedList.Node current = mergedHead;
+        for (int expectedValue : expectedValues) {
+            assertEquals(expectedValue, current.value);
+            current = current.next;
+        }
+
+        assertNull(current); // Make sure all nodes have been traversed
+    }
 }

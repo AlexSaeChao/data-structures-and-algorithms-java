@@ -1,12 +1,49 @@
 package datastructures.linkedList;
 
-public class LinkedList
-{
+
+public class LinkedList {
+    public static class Node {
+        int value;
+        Node next;
+
+        Node(int value) {
+            this.value = value;
+            this.next = null;
+        }
+    }
+
     Node head = null;
     Node tail = null;  // not strictly required
 
-    public void insert(int value)
-    {
+    public Node zipLists(LinkedList list1, LinkedList list2) {
+        Node head1 = list1.head;
+        Node head2 = list2.head;
+        Node mergedHead = new Node(0);
+        Node current = mergedHead;
+
+        while (head1 != null && head2 != null) {
+            current.next = head1;
+            head1 = head1.next;
+            current = current.next;
+
+            current.next = head2;
+            head2 = head2.next;
+            current = current.next;
+        }
+
+        if (head1 != null) {
+            current.next = head1;
+        }
+
+        if (head2 != null) {
+            current.next = head2;
+        }
+
+        return mergedHead.next;
+    }
+
+
+    public void insert(int value) {
         Node newNode = new Node(value);
         newNode.next = head;
         this.head = newNode;
@@ -15,10 +52,9 @@ public class LinkedList
         }
     }
 
-    public void append(int value)
-    {
+    public void append(int value) {
         Node newNode = new Node(value);
-        if(tail == null) {
+        if (tail == null) {
             head = newNode;
             tail = newNode;
         } else {
@@ -27,8 +63,7 @@ public class LinkedList
         }
     }
 
-    public void insertBefore(int value, int newValue)
-    {
+    public void insertBefore(int value, int newValue) {
         Node newNode = new Node(newValue);
         if (head != null && head.value == value) {
             newNode.next = head;
@@ -36,7 +71,7 @@ public class LinkedList
             return;
         }
 
-        if(head == null) {
+        if (head == null) {
             newNode.next = null;
             this.head = newNode;
             this.tail = newNode;
@@ -54,8 +89,7 @@ public class LinkedList
         }
     }
 
-    public void insertAfter(int value, int newValue)
-    {
+    public void insertAfter(int value, int newValue) {
         Node newNode = new Node(newValue);
         if (head != null && head.value == value) {
             newNode.next = head;
@@ -63,7 +97,7 @@ public class LinkedList
             return;
         }
 
-        if(head == null) {
+        if (head == null) {
             newNode.next = null;
             this.head = newNode;
             this.tail = newNode;
@@ -106,8 +140,7 @@ public class LinkedList
         return targetNode.value;
     }
 
-    public boolean includes(int value)
-    {
+    public boolean includes(int value) {
         Node current = head;
         while (current != null) {
             if (current.value == value) {
@@ -119,8 +152,7 @@ public class LinkedList
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         StringBuilder stringB = new StringBuilder();
         Node current = head;
         while (current != null) {
