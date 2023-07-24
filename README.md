@@ -9,3 +9,11 @@
 [Binary Search Array](./arrayBinarySearch/README.md)
 
 [Linked List](./dataStructures/lib/src/main/java/datastructures/linkedList/README.md)
+
+[Queue](./dataStructures/lib/src/main/java/datastructures/queue/Queue.java)
+
+[Stack](./dataStructures/lib/src/main/java/datastructures/stack/README.md)
+
+[Linked List Zip](#)
+
+[Pseudo Queue](./dataStructures/lib/src/main/java/datastructures/pseudo/README.md)
