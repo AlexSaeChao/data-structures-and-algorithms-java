@@ -17,3 +17,5 @@
 [Linked List Zip](#)
 
 [Pseudo Queue](./dataStructures/lib/src/main/java/datastructures/pseudo/README.md)
+
+[Animal Shelter](./dataStructures/lib/src/main/java/codechallenge/animalshelter/README.md)
