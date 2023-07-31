@@ -22,4 +22,4 @@
 
 [Bracket Validation](./dataStructures/lib/src/main/java/datastructures/linkedList/README.md)
 
-[Binary Trees](./datastructures/binaryTrees/README.md)
+[Binary Trees](./dataStructures/lib/src/main/java/datastructures/binaryTrees/README.md)
