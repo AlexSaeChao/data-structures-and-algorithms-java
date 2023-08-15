@@ -23,3 +23,5 @@
 [Bracket Validation](./dataStructures/lib/src/main/java/datastructures/linkedList/README.md)
 
 [Binary Trees](./dataStructures/lib/src/main/java/datastructures/binaryTree/README.md)
+
+[Insert Sort Blog](./dataStructures/lib/src/main/java/datastructures/insertionSort/InsertSort.md)
