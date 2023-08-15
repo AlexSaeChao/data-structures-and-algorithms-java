@@ -24,4 +24,6 @@
 
 [Binary Trees](./dataStructures/lib/src/main/java/datastructures/binaryTree/README.md)
 
-[Insert Sort Blog](./dataStructures/lib/src/main/java/datastructures/insertionSort/InsertSort.md)
+[Insert Sort Blog](./dataStructures/lib/src/main/java/codechallenge/insertionSort/InsertSort.md)
+
+[Merge Sort Blog](./dataStructures/lib/src/main/java/codechallenge/mergeSort/MergeSort.md)
