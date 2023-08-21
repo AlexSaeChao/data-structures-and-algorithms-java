@@ -29,3 +29,5 @@
 [Merge Sort Blog](./dataStructures/lib/src/main/java/codechallenge/mergeSort/MergeSort.md)
 
 [Quick Sort Blog](./dataStructures/lib/src/main/java/codechallenge/quickSort/QuickSort.md)
+
+[Hash Table Implementation](./dataStructures/lib/src/main/java/datastructures/hashTable/README.md)
