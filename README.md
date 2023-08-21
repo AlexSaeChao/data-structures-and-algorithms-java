@@ -27,3 +27,5 @@
 [Insert Sort Blog](./dataStructures/lib/src/main/java/codechallenge/insertionSort/InsertSort.md)
 
 [Merge Sort Blog](./dataStructures/lib/src/main/java/codechallenge/mergeSort/MergeSort.md)
+
+[Quick Sort Blog](./dataStructures/lib/src/main/java/codechallenge/quickSort/QuickSort.md)
