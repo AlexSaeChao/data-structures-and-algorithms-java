@@ -31,3 +31,5 @@
 [Quick Sort Blog](./dataStructures/lib/src/main/java/codechallenge/quickSort/QuickSort.md)
 
 [Hash Table Implementation](./dataStructures/lib/src/main/java/datastructures/hashTable/README.md)
+
+[Hash Map - Get First Repeated Word](./dataStructures/lib/src/main/java/datastructures/hashmap/README.md)

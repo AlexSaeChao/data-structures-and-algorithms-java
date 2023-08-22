@@ -6,6 +6,8 @@
 
 A hashmap is a data structure that stores key-value pairs. Keys are unique identifiers used to store values in the map. The primary purpose of a hashmap is to offer a method to store and retrieve data in nearly constant time O(1), irrespective of the size of the data. This efficiency is achieved by a hashing function which converts the key into an index in an array. If multiple keys map to the same index, collisions are resolved through various strategies, one common approach being the use of linked lists.
 
+Code Challenge is written in `HashMapChallenges.java` at path `./dataStructures/lib/src/main/java/datastructures/hashmap/HashMapChallenges.java`
+
 ## How to Run the Test
 
 To run the tests for the `HashMap` class, ensure you have JUnit integrated into your Java project.
