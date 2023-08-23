@@ -32,6 +32,6 @@
 
 [Hash Table Implementation](./dataStructures/lib/src/main/java/datastructures/hashTable/README.md)
 
-[Hash Map - Get First Repeated Word](./dataStructures/lib/src/main/java/datastructures/hashmap/README.md)
+[Hash Map - Get First Repeated Word](./dataStructures/lib/src/main/java/codechallenge/hashmap/README.md)
 
 [Hash Map - Left Join Challenge](./dataStructures/lib/src/main/java/codechallenge/leftJoinHashMaps/LeftJoinHashMaps.java)
