@@ -37,3 +37,5 @@
 [Hash Map - Left Join Challenge](./dataStructures/lib/src/main/java/codechallenge/leftJoinHashMaps/LeftJoinHashMaps.java)
 
 [Tree Intersection](./dataStructures/lib/src/main/java/codechallenge/TreeIntersection/README.md)
+
+[Graph - BFS](./dataStructures/lib/src/main/java/datastructures/graphBreadthFirst/README.md)
